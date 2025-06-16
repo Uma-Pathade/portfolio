@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Uma Pathade | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f4f4;
+      color: #222;
+      scroll-behavior: smooth;
+      
+    }
+
+  .nav-container {
+  max-width: 1300px;
+  margin: auto;
+  background: #2c3e50;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin-left: auto;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+.timeline-container {
+  max-width: 1320px;
+ 
+  color: white;
+  background: #111;
+  border-radius: 12px;
+   padding: 2.5rem 2rem;
+  margin: 1rem auto;
+}
+
+.timeline-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #b0e0e6;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.timeline-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.timeline-card {
+  background: #1a1a1a;
+  padding: 1.5rem;
+  border-left: 4px solid #6ec1e4;
+  flex: 1;
+  min-width: 280px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.timeline-card::before {
+  content: "";
+  position: absolute;
+  left: -2rem;
+  top: 1.2rem;
+  font-size: 1.2rem;
+}
+.timeline-card h4 {
+  font-size: 1rem;
+  background: #333;
+  color: #fff;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+.timeline-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+.timeline-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+.project-section {
+  background: #111;
+  padding: 2.5rem 2rem;
+ 
+  max-width: 1320px;
+  margin: 1rem auto;
+  border-radius: 12px;
+  color: white;
+}
+
+.project-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  text-align: left;
+  color: #b0e0e6;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.project-card {
+  flex: 1 1 100%;
+  max-width: 100%;
+  background: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+@media (min-width: 600px) {
+  .project-card {
+    flex: 1 1 48%;
+    max-width: 48%;
+  }
+}
+
+@media (min-width: 992px) {
+  .project-card {
+    flex: 1 1 30%;
+    max-width: 30%;
+  }
+}
+
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #b0e0e6;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+.resume-btn {
+  background: white;
+  color: #2c3e50;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.hero {
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70vh;
+ 
+  padding: 3rem 2rem;
+  margin: 1rem auto;
+  max-width: 1320px;
+  border-radius: 12px;
+  
+}
+
+.hero-left, .hero-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  line-height: 1.3;
+}
+.hero-left span {
+  color: #5d84b7;
+}
+.hero-buttons {
+  margin-top: 2rem;
+}
+.hero-buttons a {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 2px solid white;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  margin-right: 1rem;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.hero-buttons a:hover {
+  background-color: #b0e0e6; 
+  color: #111;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 2px solid white;
+  border-radius: 8px;
+  background: transparent;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #b0e0e6; /* your fav color */
+}
+
+
+  section {
+  padding: 3rem 2rem;
+  max-width: 1320px;
+  margin: 1.5rem auto;
+}
+
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 2.5rem;
+    }
+
+      .strike-target {
+  transition: all 0.4s ease;
+}
+.struck {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+    .hide {
+      opacity: 0 !important;
+      height: 0;
+      overflow: hidden;
+      display: inline-block;
+    }
+@media (max-width: 768px) {
+  .hero-left h1 {
+    font-size: 1.8rem;     /* ↓ Shrinks heading */
+    line-height: 1.3;
+  }
+
+  .hero-left p {
+    font-size: 1rem;        /* ↓ Shrinks paragraph text */
+  }
+
+  .hero-buttons a {
+    padding: 10px 16px;
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    padding: 2rem 1.5rem;   /* ↓ Reduce space in mobile */
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-right {
+    margin-top: 1.5rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+<nav style="padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; max-width:1320px; margin:auto; background:#111; border-radius:10px;">
+  
+  <!-- Left: Name -->
+  <div style="font-weight:bold; font-size:1.5rem; color:#b0e0e6;">
+    Uma Pathade
+  </div>
+
+  <!-- Right: Links -->
+  <ul style="display:flex; gap:2rem; list-style:none; margin:0; padding:0;">
+    <li><a href="#about" style="text-decoration:none; color:#b0e0e6; font-weight:600;">About</a></li>
+    <li><a href="#education" style="text-decoration:none; color:#b0e0e6; font-weight:600;">Education</a></li>
+    <li><a href="#projects" style="text-decoration:none; color:#b0e0e6; font-weight:600;">Projects</a></li>
+    <li><a href="#contact" style="text-decoration:none; color:#b0e0e6; font-weight:600;">Contact</a></li>
+    <li>
+      <a href="umap.resume.pdf" target="_blank" 
+         style="border:2px solid white; padding:8px 14px; border-radius:6px; color:white; font-weight:600; text-decoration:none;">
+        Resume
+      </a>
+    </li>
+  </ul>
+
+</nav>
+
+</div>
+
+  <!-- Hero Section -->
+ <section class="hero">
+  <!-- LEFT: Text -->
+  <div class="hero-left">
+    <h1>Hello I'm <span>Uma</span>,<br />
+      a System Admin Enthusiast<br />
+      Passionate About AWS, Cloud, Linux 
+    </h1>
+    <p>Linux • RHCSA • CLA • CloudComputing • AWS</p>
+    <div class="hero-buttons">
+      <a href="#contact">Connect With Me</a>
+    </div>
+  </div>
+
+  <!-- RIGHT: Image + Button -->
+  <div class="hero-right" style="display: flex; flex-direction: column; align-items: center;">
+    <img src="mypic.jpg" alt="Uma Photo"
+         style="width: 250px; border-radius: 12px; margin-bottom: 1rem;" />
+    <a href="umap.resume.pdf" target="_blank" class="hero-btn">
+  Download Resume
+</a>
+
+  </div>
+</section>
+
+  
+<section id="about" style="background:#222; color:white; border-radius:10px; padding:2.5rem 2rem; max-width:1320px; margin: 1rem auto;">
+
+  <div style="margin-bottom: 2rem;">
+<h2 style="font-size:2.8rem; font-weight:700; text-align:left; color:#b0e0e6;">About Me ?</h2>
+
+</div>
+
+<label style="
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  background: #b0e0e6;
+  color: #2c3e50;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: fit-content;
+">
+  Click Me
+  <input type="checkbox" id="toggleDetails" style="transform: scale(1.5);" />
+</label>
+
+
+
+  <div style="display:flex; flex-wrap:wrap; gap:2rem;">
+    <div style="flex:1; min-width:300px;">
+     <p>
+  Hi,<span class="strike-target">I am </span> <strong>Uma Pathade</strong>,<span class="strike-target"> Originally From Chh. Sambhajinagar , Where i completed </span> <strong>10th with 92.40% </strong><br>
+  <span class="strike-target">Then completed my diploma from</span><strong> Government Polytechnic Jalna With First Class distinction</strong><br>
+  <span class="strike-target">and currently i'm a passionate</span> <strong>Third year Computer science and engineering student at h CSMSS College of Engineering.</strong>
+   <span class="strike-target">Currently, I am expanding my expertise by pursuing certifications in </span><strong>RHCSA</strong> <span class="strike-target">and</span><strong> CLA</strong>.
+</p>
+
+
+
+    </div>
+
+    <div style="flex:1; min-width:300px;">
+      <p>
+        <span class="strike-target">I'm diving deep into</span> Linux, system administration, and cloud technologies.<br>
+        <span class="strike-target">I’m passionate about </span></strong> managing servers, deploying applications, and mastering real-world infrastructure.</strong>
+      </p>
+    </div>
+  </div>
+  <h3 style="margin-top:3rem; color:#b0e0e6; font-weight:800;">
+  “Excellence happens not by accident. It is a process.” – Dr. APJ Abdul Kalam
+</h3>
+
+</section>
+<section id="education" class="timeline-container" >
+  <h2 class="timeline-title">My Education</h2>
+  <div class="timeline-row">
+    
+    <!-- School -->
+    <div class="timeline-card">
+      <h4>2020</h4>
+      <h3>Schooling</h3>
+      <p>I had completed my SSC from Shri Balaji Highschool with 92.40%.</p>
+    </div>
+
+    <!-- Diploma -->
+    <div class="timeline-card">
+      <h4>2020–2023</h4>
+      <h3>Diploma</h3>
+      <p>I completed my Diploma in Computer Science from Government Polytechnic, Jalna with First class distinction (84.69%).</p>
+    </div>
+
+    <!-- B.Tech -->
+    <div class="timeline-card">
+      <h4>2023–2026</h4>
+      <h3>Engineering</h3>
+      <p>Currently pursuing B.Tech in Computer Science & Engineering at CSMSS College of Engineering, Chh. Sambhajinagar.</p>
+    </div>
+
+  </div>
+
+  <h2 class="timeline-title" style="margin-top:4rem;">My Experience</h2>
+  <div class="timeline-row">
+
+    <!-- Internship -->
+    <div class="timeline-card">
+      <h4>2022</h4>
+      <h3>Intern – Hindavi Softech</h3>
+      <p>Worked on basic web development during my internship in Jalna (HTML, CSS, JS).</p>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Projects Section -->
+<section id="projects" class="project-section">
+  <h2>My Projects</h2>
+<div class="project-grid">
+
+  <!-- Project 1: Smart Ballot Application -->
+  <div class="project-card">
+    <h3>Smart Ballot Application</h3>
+    <p><strong>B.Tech. Project</strong> | Team Size: 2</p>
+    <ul style="margin-top:1rem; padding-left:1.2rem;">
+      <li>Innovative voting app to enhance election security and accessibility.</li>
+      <li>Includes safety tips and emergency contacts for hassle-free voting.</li>
+    <li><strong>Platform:</strong> Android</li>
+    <li><strong>Frontend:</strong> XML, Jetpack Compose (or classic UI)</li>
+    <li><strong>Backend:</strong> Java (or Kotlin)</li>
+    <li><strong>Tools:</strong> Android Studio, Firebase (if used), Git</li>
+    </ul>
+  </div>
+
+  <!-- Project 2: Coffee Management System -->
+  <div class="project-card">
+    <h3>Coffee Management System</h3>
+    <p><strong>Diploma Project</strong> | Team Size: 3</p>
+    <ul style="margin-top:1rem; padding-left:1.2rem;">
+      <li>Web app to manage inventory, orders, sales, and staff operations.</li>
+      <li>Improves efficiency & customer experience via automation.</li>
+      <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
+    <li><strong>Backend:</strong> PHP</li>
+    <li><strong>Database:</strong> MySQL</li>
+    <li><strong>Tools:</strong> XAMPP, GitHub, VS Code</li>
+    </ul>
+  </div>
+
+  <!-- Project 3: EduHub – Virtual Classroom -->
+  <div class="project-card">
+    <h3>EduHub – Virtual Classroom</h3>
+    <p><strong>Self Project</strong> | Individual</p>
+    <ul style="margin-top:1rem; padding-left:1.2rem;">
+      <li>Virtual learning platform for students with live updates & smooth UX.</li>
+      <li><strong>Frontend:</strong> React 18, TypeScript, Tailwind CSS, React Router</li>
+      <li><strong>Backend:</strong> Supabase, Row-Level Security, Real-time DB</li>
+      <li><strong>Tools:</strong> Vite, ESLint, PostCSS, Lucide React</li>
+    </ul>
+  </div>
+
+</div>
+
+
+</section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" style="background:#111; color:white; border-radius:12px; padding:3.5rem 2rem; max-width:1320px; margin:1rem auto; text-align:left;">
+
+  <h2 style="font-size:2.5rem; font-weight:700; margin-bottom:2.5rem; text-align:left; color:#b0e0e6;">For more details</h2>
+
+  <div style="display:flex; flex-wrap:wrap; gap:2rem; justify-content:space-between; align-items: flex-start;">
+    
+    <!-- Contact Info -->
+    <div style="flex:1; min-width:300px;">
+      <h3 style="color:#b0e0e6; font-size:1.5rem; margin-bottom:1rem;">Connect With Me</h3>
+      
+      <div style="border:1px solid black; padding:12px; border-radius:6px; font-size:1.1rem; margin-bottom:1rem; display:flex; align-items:center; gap:10px;">
+        📧 <span>umapathade2@gmail.com</span>
+      </div>
+      
+      <div style="border:1px solid black; padding:12px; border-radius:6px; font-size:1.1rem; display:flex; align-items:center; gap:10px;">
+        📞 <span>+91 9923438561</span>
+      </div>
+    </div>
+    
+    <!-- Contact Form -->
+    <div style="flex:1; min-width:300px;">
+      <h3 style="color:#b0e0e6; font-size:1.5rem; margin-bottom:1rem;">Send me a message!</h3>
+      
+      <form action="https://formspree.io/f/mldnnnoj" method="POST">
+        <label>Name:</label><br>
+        <input type="text" name="name" required style="width:100%; margin-bottom:1rem;"><br>
+        
+        <label>Number:</label><br>
+        <input type="text" name="number" required style="width:100%; margin-bottom:1rem;"><br>
+        
+        <label>E-mail:</label><br>
+        <input type="email" name="email" required style="width:100%; margin-bottom:1rem;"><br>
+        
+        <label>Message:</label><br>
+        <textarea name="message" rows="4" required style="width:100%; margin-bottom:1.5rem;"></textarea><br>
+        
+        <button type="submit" style="padding:10px 20px; background:#b0e0e6; color:white; border:none; border-radius:6px; font-weight:600;">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+<footer style="background:#111; color:white; padding:2.5rem 2rem; max-width:1320px; margin:1rem auto; border-radius:12px; text-align:center;">
+
+  <!-- Centered Row: Quote + Icons -->
+  <div style="display: flex; justify-content: center; align-items: center; gap: 2.5rem; flex-wrap: wrap;">
+
+    <!-- Quote -->
+    <div style="font-weight:700; font-size:2.5rem; color:#b0e0e6;">
+      Life's Great!<br>& I'm doing Best.
+    </div>
+
+    <!-- Icons -->
+    <div style="display:flex; gap:2.5rem; font-size:2.1rem;">
+      <a href="https://leetcode.com/problemset/" target="_blank" style="color:white;"><i class="fa-solid fa-code"></i></a>
+      <a href="https://www.codechef.com/users/umapathade2" target="_blank" style="color:white;"><i class="fa-solid fa-utensils"></i></a>
+      <a href="https://www.hackerrank.com/profile/umapathade2" target="_blank" style="color:white;"><i class="fab fa-hackerrank"></i></a>
+      <a href="https://www.linkedin.com/in/uma-pathade-2286942b9" target="_blank" style="color:white;"><i class="fab fa-linkedin"></i></a>
+      <a href="https://onlinejudge.org/index.php?option=com_comprofiler&Itemid=3" target="_blank" style="color:white;"><i class="fa-solid fa-terminal"></i></a>
+    </div>
+
+  </div>
+
+  <!-- ✅ Bottom Line -->
+  <p style="text-align:center; font-size:0.9rem; color:#bbb; margin-top:2.5rem;">
+     Uma Pathade | All Rights Reserved.
+  </p>
+</footer>
+
+
+
+
+  <!-- Toggle JS -->
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('toggleDetails');
+    toggle.addEventListener('change', () => {
+      document.querySelectorAll('.strike-target').forEach(el => {
+        el.classList.toggle('struck');
+      });
+    });
+  });
+ 
+</script>
+
+</body>
+</html>
